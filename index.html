@@ -1,62 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>My Favorite Songs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Borel&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="borel-regular">These are my favorite songs</h1>
+
+  <h1 class="title">These are my favorite songs</h1>
 
   <div class="thumbnail-gallery">
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
       <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Rick Astley">
     </a>
-     <a href="https://www.youtube.com/watch?v=T_yd1ZmTSkk" target="_blank">
-      <img src="https://img.youtube.com/vi/T_yd1ZmTSkk/hqdefault.jpg" alt="Ek Bar | Do Ghoont | ඒක බාර් - Ek Bar Dj Remix | Dance Dj 2023">
+    <a href="https://www.youtube.com/watch?v=T_yd1ZmTSkk" target="_blank">
+      <img src="https://img.youtube.com/vi/T_yd1ZmTSkk/hqdefault.jpg" alt="Ek Bar">
     </a>
-     <a href="https://youtu.be/qy0B3DnY31w?t=2" target="_blank">
-      <img src="https://img.youtube.com/vi/qy0B3DnY31w/hqdefault.jpg" alt="Meghan Trainor - Like I'm Gonna Lose You (Lyrics) ft. John Legend">
+    <a href="https://www.youtube.com/watch?v=qy0B3DnY31w" target="_blank">
+      <img src="https://img.youtube.com/vi/qy0B3DnY31w/hqdefault.jpg" alt="Meghan Trainor">
     </a>
-     <a href="https://www.youtube.com/watch?v=fJsJU7E7X-M" target="_blank">
-      <img src="https://img.youtube.com/vi/fJsJU7E7X-M/hqdefault.jpg" alt="Paul Anka - Put Your Head On My Shoulder (Lyrics)">
+    <a href="https://www.youtube.com/watch?v=fJsJU7E7X-M" target="_blank">
+      <img src="https://img.youtube.com/vi/fJsJU7E7X-M/hqdefault.jpg" alt="Paul Anka">
     </a>
-     <a href="https://www.youtube.com/watch?v=gmWlNI4Zl2s" target="_blank">
-    <img src="https://img.youtube.com/vi/gmWlNI4Zl2s/hqdefault.jpg" alt="Song 1">
-  </a>
-
-  <a href="https://www.youtube.com/watch?v=fSMfN-J1eP8" target="_blank">
-    <img src="https://img.youtube.com/vi/fSMfN-J1eP8/hqdefault.jpg" alt="Song 2">
-  </a>
-
-  <a href="https://www.youtube.com/watch?v=JqIHlDVqUTw" target="_blank">
-    <img src="https://img.youtube.com/vi/JqIHlDVqUTw/hqdefault.jpg" alt="Song 3">
-  </a>
   </div>
-<button onclick="toggleCommentBox()" class="comment-btn">What's your favorite song?</button>
 
-<div id="comment-box" class="comment-popup">
-  <h2>Share your favorite song 🎧</h2>
-  <textarea placeholder="Type your favorite song here..."></textarea>
-  <br />
-  <button onclick="submitComment()">Submit</button>
-</div>
-<script>
-  function toggleCommentBox() {
-    const commentBox = document.getElementById("comment-box");
-    commentBox.style.display = commentBox.style.display === "block" ? "none" : "block";
-  }
+  <button onclick="togglePopup()" class="comment-btn">What's your favorite song?</button>
 
-  function submitComment() {
-    const textarea = document.querySelector("#comment-box textarea");
-    if (textarea.value.trim() !== "") {
-      alert("Thanks for sharing your favorite song: " + textarea.value);
-      textarea.value = "";
-      document.getElementById("comment-box").style.display = "none";
-    } else {
-      alert("Please write something before submitting!");
+  <div id="popup" class="popup-box">
+    <textarea placeholder="Type your favorite song..."></textarea>
+    <br>
+    <button onclick="togglePopup()">Submit</button>
+  </div>
+
+  <script>
+    function togglePopup() {
+      const popup = document.getElementById("popup");
+      popup.classList.toggle("active");
     }
-  }
-</script>
+  </script>
+
 </body>
 </html>
