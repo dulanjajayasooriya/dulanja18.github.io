@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>My Favorite Songs</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <h1 class="borel-regular">These are my favorite songs</h1>
@@ -32,5 +33,13 @@
     <img src="https://img.youtube.com/vi/JqIHlDVqUTw/hqdefault.jpg" alt="Song 3">
   </a>
   </div>
+<button onclick="toggleCommentBox()" class="comment-btn">What's your favorite song?</button>
+
+<div id="comment-box" class="comment-popup">
+  <h2>Share your favorite song 🎧</h2>
+  <textarea placeholder="Type your favorite song here..."></textarea>
+  <br />
+  <button onclick="submitComment()">Submit</button>
+</div>
 </body>
 </html>
