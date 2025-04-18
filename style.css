@@ -1,0 +1,47 @@
+
+body {
+  background: linear-gradient(-45deg, #ffcc00,  #3dccf2, #8ae094, #f76300);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  font-family: Copperplate, Papyrus, fantasy;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.thumbnail-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.thumbnail-gallery img {
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+}
+
