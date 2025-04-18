@@ -41,5 +41,22 @@
   <br />
   <button onclick="submitComment()">Submit</button>
 </div>
+<script>
+  function toggleCommentBox() {
+    const commentBox = document.getElementById("comment-box");
+    commentBox.style.display = commentBox.style.display === "block" ? "none" : "block";
+  }
+
+  function submitComment() {
+    const textarea = document.querySelector("#comment-box textarea");
+    if (textarea.value.trim() !== "") {
+      alert("Thanks for sharing your favorite song: " + textarea.value);
+      textarea.value = "";
+      document.getElementById("comment-box").style.display = "none";
+    } else {
+      alert("Please write something before submitting!");
+    }
+  }
+</script>
 </body>
 </html>
