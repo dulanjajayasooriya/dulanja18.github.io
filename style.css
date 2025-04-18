@@ -1,14 +1,14 @@
 
 body {
-  background: linear-gradient(-45deg, #ffcc00,  #3dccf2, #8ae094, #f76300);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
+  background: url("55.jpg") no-repeat center center fixed;
+  background-size: cover;
   font-family: Copperplate, Papyrus, fantasy;
   margin: 0;
   padding: 20px;
   text-align: center;
   color: white;
 }
+
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
