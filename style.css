@@ -27,11 +27,26 @@ body {
   padding: 0 20px;
 }
 
-header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+.hero-header {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
   text-align: center;
-  padding: 60px 0;
+  color: white;
+  background: 
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+    url('WhatsApp Image 2025-05-01 at 23.53.03 (1).jpeg') no-repeat;
+  background-size: cover;
+  background-position: center 30%; /* KEY CHANGE - Adjust this value */
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .hero-header {
+    background-position: center 40%; /* Higher value brings face up */
+    height: 80vh;
+  }
 }
 
 header h1 {
